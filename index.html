@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contactos Segura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="app-title">Agenda de Contactos</h1>
+        </header>
+        
+        <div id="alertBox" class="alert"></div>
+        
+        <div class="card">
+            <h2>Agregar Nuevo Contacto</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error" id="nameError">Por favor ingrese un nombre válido</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="emailError">Por favor ingrese un email válido</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" id="phone" name="phone">
+                    <div class="error" id="phoneError">Por favor ingrese un teléfono válido</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <textarea id="address" name="address" rows="2"></textarea>
+                    <div class="error" id="addressError">Por favor ingrese una dirección válida</div>
+                </div>
+                
+                <button type="submit">Guardar Contacto</button>
+            </form>
+        </div>
+        
+        <div class="card contacts-list">
+            <h2>Mis Contactos</h2>
+            <div id="contactsContainer">
+                <p id="noContacts">No hay contactos guardados. Agrega tu primer contacto.</p>
+                <!-- Los contactos se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
